@@ -1,5 +1,6 @@
 import { useState } from "react";
 import CommentForm from "./CommentForm";
+import VoteComment from "./VoteComment";
 import { CommentType } from "../App";
 
 interface Props {
@@ -24,6 +25,7 @@ export default function Comment({ comment }: Props) {
       score: 0,
     };
     setReplies((replies) => [...replies, newReply]);
+    setIsReplying(false);
     setFormStatus(false);
   };
 
@@ -36,6 +38,7 @@ export default function Comment({ comment }: Props) {
           Reply
         </button>
       </div>
+      <VoteComment />
       {isReplying && !formStatus && (
         <CommentForm onSubmit={handleReplySubmit} />
       )}
