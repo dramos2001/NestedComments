@@ -17,11 +17,11 @@ export default function VoteComment() {
   return (
     <div>
       <button className={styles.voteButton} onClick={handleCommentUpvote}>
-        <FontAwesomeIcon icon={faArrowUpLong} />
+        <FontAwesomeIcon className={styles.upvote} icon={faArrowUpLong} />
       </button>
-      <span>{score}</span>
+      <span className={styles.score}>{score}</span>
       <button className={styles.voteButton} onClick={handleCommentDownvote}>
-        <FontAwesomeIcon icon={faArrowDownLong} />
+        <FontAwesomeIcon className={styles.downvote} icon={faArrowDownLong} />
       </button>
     </div>
   );

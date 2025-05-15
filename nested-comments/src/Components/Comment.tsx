@@ -37,11 +37,14 @@ export default function Comment({ comment }: Props) {
       <div>
         <h4>{comment.name}</h4>
         <p>{comment.text}</p>
-        <button className={styles.replyButton} id="reply-button" onClick={handleReplyButtonClick}>
-          <FontAwesomeIcon icon={faReply} />
-        </button>
+        <div className={styles.options}>
+          <VoteComment />
+          <button className={styles.replyButton} id="reply-button" onClick={handleReplyButtonClick}>
+            <FontAwesomeIcon className={styles.replyIcon} icon={faReply} />
+            Reply
+          </button>
+        </div>
       </div>
-      <VoteComment />
       {isReplying && !formStatus && (
         <CommentForm onSubmit={handleReplySubmit} />
       )}
