@@ -1,0 +1,9 @@
+.voteButton {
+    background-color: transparent;
+    border: none;
+    margin: 3px;
+}
+
+.voteButton:hover {
+    cursor: pointer;
+}

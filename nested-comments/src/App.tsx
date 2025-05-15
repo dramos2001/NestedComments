@@ -1,4 +1,4 @@
-import './App.css'
+import styles from  './App.module.css'
 import { useState } from 'react'
 import CommentForm from './Components/CommentForm';
 import Comment from './Components/Comment';
@@ -26,7 +26,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className={styles.commentForm}>
         <h1><b>New Post</b></h1>
         <CommentForm onSubmit={handleCommentSubmit}/>
       </div>

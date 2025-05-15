@@ -1,0 +1,9 @@
+.replyButton {
+  background-color: transparent;
+  border: none;
+  margin: 2px;
+}
+
+.replyButton:hover {
+  cursor: pointer;
+}
