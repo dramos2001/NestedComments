@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from './CommentForm.module.css'
 
 interface Props {
   onSubmit: (name: string, comment: string) => void;
@@ -28,8 +29,9 @@ export default function CommentForm({ onSubmit }: Props) {
   const canSubmitComment = name.trim() === "" || comment.trim() === "";
 
   return (
-    <form onSubmit={handleFormSubmit}>
+    <form className={styles.formContainer} onSubmit={handleFormSubmit}>
       <input
+        className={styles.nameInput}
         type="text"
         name="nameInput"
         placeholder="Name"
@@ -37,12 +39,13 @@ export default function CommentForm({ onSubmit }: Props) {
         onChange={handleNameChange}
       />
       <textarea
+        className={styles.nameInput}
         name="commentInput"
         placeholder="Write your response here..."
         value={comment}
         onChange={handleCommentChange}
       />
-      <button type="submit" id="submit-button" disabled={canSubmitComment}>
+      <button className={styles.submitButton} type="submit" id="submit-button" disabled={canSubmitComment}>
         Submit
       </button>
     </form>

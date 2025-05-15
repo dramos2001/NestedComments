@@ -1,0 +1,22 @@
+.voteButton {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.voteButton:hover {
+  cursor: pointer;
+}
+
+.score {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.upvote {
+  color: #ff5500;
+}
+
+.downvote {
+  color: #00aaff;
+}
