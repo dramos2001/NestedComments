@@ -25,8 +25,7 @@
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: 'Inter', serif;
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
@@ -59,7 +58,7 @@
   background-color: #94d3a2;
   border-color: rgba(27, 31, 35, 0.1);
   color: rgba(255, 255, 255, 0.8);
-  cursor: default;
+  cursor: not-allowed;
 }
 
 .submitButton:active {
