@@ -20,3 +20,11 @@
 .downvote {
   color: #00aaff;
 }
+
+.upvote:hover {
+  color: #db4900;
+}
+
+.downvote:hover {
+  color: #0090d8;
+}

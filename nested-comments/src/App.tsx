@@ -20,8 +20,7 @@ function App() {
       replies: [],
       score: 0,
     };
-    // setComments([...comments, newComment]);
-    setComments(comments => [...comments, newComment]);  // comments -> prevComments
+    setComments(comments => [...comments, newComment]); 
   };
 
   return (
