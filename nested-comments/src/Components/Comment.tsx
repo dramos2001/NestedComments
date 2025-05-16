@@ -34,7 +34,7 @@ export default function Comment({ comment }: Props) {
 
   return (
     <div>
-      <div>
+      <div className={styles.commentContainer}>
         <h4>{comment.name}</h4>
         <p>{comment.text}</p>
         <div className={styles.options}>
@@ -48,7 +48,7 @@ export default function Comment({ comment }: Props) {
       {isReplying && !formStatus && (
         <CommentForm onSubmit={handleReplySubmit} />
       )}
-      <div>
+      <div className={styles.replies}>
           {replies.map((reply, index) => {
             return <Comment key={index} comment={reply} />
           })}
