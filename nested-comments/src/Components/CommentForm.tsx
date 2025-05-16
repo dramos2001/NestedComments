@@ -29,7 +29,7 @@ export default function CommentForm({ onSubmit }: Props) {
   const canSubmitComment = name.trim() === "" || comment.trim() === "";
 
   return (
-    <form className={styles.formContainer} onSubmit={handleFormSubmit}>
+    <form className={styles.formContainer} onSubmit={handleFormSubmit} autoComplete="off">
       <input
         className={styles.nameInput}
         type="text"
