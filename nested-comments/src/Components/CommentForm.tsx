@@ -29,25 +29,27 @@ export default function CommentForm({ onSubmit }: Props) {
   const canSubmitComment = name.trim() === "" || comment.trim() === "";
 
   return (
-    <form className={styles.formContainer} onSubmit={handleFormSubmit} autoComplete="off">
-      <input
-        className={styles.nameInput}
-        type="text"
-        name="nameInput"
-        placeholder="Name"
-        value={name}
-        onChange={handleNameChange}
-      />
-      <textarea
-        className={styles.nameInput}
-        name="commentInput"
-        placeholder="Write your response here..."
-        value={comment}
-        onChange={handleCommentChange}
-      />
-      <button className={styles.submitButton} type="submit" id="submit-button" disabled={canSubmitComment}>
-        Submit
-      </button>
-    </form>
+    <div>
+      <form className={styles.formContainer} onSubmit={handleFormSubmit} autoComplete="off">
+        <input
+          className={styles.nameInput}
+          type="text"
+          name="nameInput"
+          placeholder="Name"
+          value={name}
+          onChange={handleNameChange}
+        />
+        <textarea
+          className={styles.nameInput}
+          name="commentInput"
+          placeholder="Write your response here..."
+          value={comment}
+          onChange={handleCommentChange}
+        />
+        <button className={styles.submitButton} type="submit" id="submit-button" disabled={canSubmitComment}>
+          Submit
+        </button>
+      </form>
+    </div>
   );
 }

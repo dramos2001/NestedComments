@@ -24,9 +24,9 @@ function App() {
   };
 
   return (
-    <>
-      <div className={styles.commentForm}>
-        <h1><b>New Post</b></h1>
+    <div className={styles.app}>
+      <div className={styles.title}>
+        <h1>New Post</h1>
         <CommentForm onSubmit={handleCommentSubmit}/>
       </div>
       <div>
@@ -34,7 +34,7 @@ function App() {
           <Comment key={index} comment={comment} />
         ))}
       </div>
-    </>
+    </div>
   )
 }
 
